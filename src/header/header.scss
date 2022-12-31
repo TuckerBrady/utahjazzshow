@@ -1,0 +1,31 @@
+.header {
+    margin-top: 60px;
+
+    .headerTitle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'DM Sans', sans-serif;
+        color: #444;
+
+        .headerTitle__Small {
+            position: absolute;
+            top: 18%;
+            font-size: 20px;
+        }
+
+        .headerTitle__Large {
+            position: absolute;
+            top: 20%;
+            font-size: 100px;
+
+        }
+    }
+
+    .headerTitle__Image {
+        width: 100%;
+        height: 450px;
+        margin-top: 80px;
+        object-fit: cover;
+    }
+}
