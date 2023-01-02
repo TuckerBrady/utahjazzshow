@@ -1,5 +1,5 @@
 import "./Header.scss";
-import { images } from "../constants";
+import { images } from "../../constants";
 
 export default function header() {
   return (
