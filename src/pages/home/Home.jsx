@@ -1,4 +1,4 @@
-import Header from "../../header/Header";
+import Header from "../../components/header/Header";
 import Posts from "../../posts/Posts";
 import Sidebar from "../../sidebar/Sidebar";
 import "./Home.scss";
