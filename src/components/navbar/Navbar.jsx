@@ -1,6 +1,6 @@
 import React from "./Navbar.scss";
 
-import { images } from "../constants";
+import { images } from "../../constants";
 
 export default function Navbar() {
   return (

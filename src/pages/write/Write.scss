@@ -1,0 +1,64 @@
+.write {
+    padding-top: 50px;
+
+    .write__Image {
+        margin-left: 150px;
+        width: 70vw;
+        height: 250px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    .write__Form {
+        position: relative;
+
+
+        .form__Group {
+            margin-left: 150px;
+            display: flex;
+            align-items: center;
+
+            .write__Icon {
+                font-size: 20px;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                border: 1px solid;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: rgb(118, 118, 118);
+                cursor: pointer;
+            }
+
+            .write__Input {
+                font-size: 30px;
+                border: none;
+                padding: 20px;
+                width: 70vw;
+            }
+
+            .write__Input:focus {
+                outline: none;
+            }
+
+            .write__Text {
+                font-size: 20px;
+                height: 100vh;
+            }
+        }
+
+        .write__Submit {
+            position: absolute;
+            color: white;
+            background-color: teal;
+            border: none;
+            border-radius: 10px;
+            top: 20px;
+            right: 50px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    }
+}

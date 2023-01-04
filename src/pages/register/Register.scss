@@ -1,0 +1,58 @@
+.register {
+    font-family: 'Roboto', sans-serif;
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0.3)
+        ), url("../../assets/background-image-2.jpg");
+    background-size: cover;
+
+    .register__Title {
+        font-size: 50px;
+    }
+
+    .register__Form {
+        margin-top: 20px;
+        display: flex;flex-direction: column;
+
+        .register__Input {
+            padding: 10px;
+            background-color: white;
+            border: none;
+        }
+
+        .register__Button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: teal;
+            border: none;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    }
+
+    .register__Form > input:focus {
+        outline: none;
+    }
+
+    .register__Form > label {
+        margin: 10px 0;
+    }
+
+    .register__LoginButton {
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: lightcoral;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        padding: 10px;
+        color: white;
+    }
+}

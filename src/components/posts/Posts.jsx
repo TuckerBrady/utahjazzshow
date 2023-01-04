@@ -1,4 +1,4 @@
-import React from "./Posts.scss";
+import "./Posts.scss";
 import Post from "../post/Post";
 
 export default function Sidebar() {
