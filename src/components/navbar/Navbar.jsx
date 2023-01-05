@@ -1,8 +1,10 @@
 import React from "./Navbar.scss";
+import { Link } from "react-router-dom";
 
 import { images } from "../../constants";
 
 export default function Navbar() {
+  const user = false;
   return (
     <div className="navbar">
       <div className="navbarLeft">
@@ -12,15 +14,46 @@ export default function Navbar() {
       </div>
       <div className="navbarCenter">
         <ul className="navbarList">
-          <li className="navbarList__item">Home</li>
-          <li className="navbarList__item">About</li>
-          <li className="navbarList__item">Contact</li>
-          <li className="navbarList__item">Write</li>
-          <li className="navbarList__item">Logout</li>
+          <li className="navbarList__item">
+            <Link to="/" className="navbar__Link">
+              Home
+            </Link>
+          </li>
+          <li className="navbarList__item">
+            <Link to="/about" className="navbar__Link">
+              About
+            </Link>
+          </li>
+          <li className="navbarList__item">
+            <Link to="/contact" className="navbar__Link">
+              Contact
+            </Link>
+          </li>
+          <li className="navbarList__item">
+            <Link to="/write" className="navbar__Link">
+              Write
+            </Link>
+          </li>
+          <li className="navbarList__item">{user && "Logout"}</li>
         </ul>
       </div>
       <div className="navbarRight">
-        <img className="navbarImage" src={images.profile} alt="profile" />
+        {user ? (
+          <img className="navbarImage" src={images.profile} alt="profile" />
+        ) : (
+          <ul className="navbarList">
+            <li className="navbarList__item">
+              <Link to="/login" className="navbar__Link">
+                Login
+              </Link>
+            </li>
+            <li className="navbarList__item">
+              <Link to="/register" className="navbar__Link">
+                Register
+              </Link>
+            </li>
+          </ul>
+        )}
         <i class="NavbarIcon__search fa-sharp fa-solid fa-magnifying-glass" />
       </div>
     </div>

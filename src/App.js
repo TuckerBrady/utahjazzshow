@@ -21,11 +21,11 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="/register" element={{user ? <Home/> : <Register/>}} />
-        <Route path="/login" element={<Login/>} />
-        <Route path="/settings" element={<Settings/>} />
+        <Route path="/register" element={user ? <Home/> : <Register/>} />
+        <Route path="/login" element={user ? <Home/> : <Login/>} />
+        <Route path="/settings" element={user ? <Settings/> : <Register/>} />
         <Route path="/post/:postId" element={<Single/>} />
-        <Route path="/write" element={<Write/>} />
+        <Route path="/write" element={user ? <Write/> : <Register/>} />
       </Routes>
     </Router>
   );

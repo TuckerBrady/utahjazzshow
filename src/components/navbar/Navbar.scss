@@ -66,6 +66,21 @@
             margin-left: 15px;
             cursor: pointer;
         }
+
+        .navbarList {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            .navbarList__item {
+                margin-right: 20px;
+                font-size: 18px;
+                font-weight: 300;
+                cursor: pointer;
+            }
+        }
     }
 }
 
