@@ -1,7 +1,7 @@
 import "./Posts.scss";
 import Post from "../post/Post";
 
-export default function Sidebar() {
+export default function Posts() {
   return (
     <div className="posts">
       <Post />
