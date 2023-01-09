@@ -18,7 +18,7 @@ router.post("/register", async(req, res) => {
     } catch (err) {
         res.status(500).json(err);
     }
-})
+});
 
 //Login
 router.post("/login", async(req, res) => {
@@ -30,7 +30,7 @@ router.post("/login", async(req, res) => {
         !validated && res.status(400).json("Wrong Credentials");
 
         const { password, ...otherStuff } = user._doc;
-        res.status(200).json(user);
+        res.status(200).json(otherStuff);
     } catch (err) {
         res.status(500).json(err);
     }
