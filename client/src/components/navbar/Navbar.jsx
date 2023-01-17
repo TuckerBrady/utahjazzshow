@@ -8,9 +8,9 @@ export default function Navbar() {
   return (
     <div className="navbar">
       <div className="navbarLeft">
-        <i class="navbarIcon__logo fa-brands fa-square-facebook" />
-        <i class="navbarIcon__logo fa-brands fa-square-instagram" />
-        <i class="navbarIcon__logo fa-brands fa-square-twitter" />
+        <i className="navbarIcon__logo fa-brands fa-square-facebook" />
+        <i className="navbarIcon__logo fa-brands fa-square-instagram" />
+        <i className="navbarIcon__logo fa-brands fa-square-twitter" />
       </div>
       <div className="navbarCenter">
         <ul className="navbarList">
@@ -54,7 +54,7 @@ export default function Navbar() {
             </li>
           </ul>
         )}
-        <i class="NavbarIcon__search fa-sharp fa-solid fa-magnifying-glass" />
+        <i className="NavbarIcon__search fa-sharp fa-solid fa-magnifying-glass" />
       </div>
     </div>
   );

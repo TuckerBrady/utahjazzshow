@@ -15,7 +15,7 @@ export default function Settings() {
           <div className="settings_ProfilePicture">
             <img src={images.profile} alt="Profile" />
             <label htmlFor="fileInput">
-              <i class="settings__ProfilePictureIcon fa-regular fa-user"></i>
+              <i className="settings__ProfilePictureIcon fa-regular fa-user"></i>
             </label>
             <input type="file" id="fileInput" style={{ display: "none" }} />
           </div>

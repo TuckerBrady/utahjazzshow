@@ -9,8 +9,8 @@ export default function SinglePost() {
         <h1 className="singlepost__Title">
           Single Post Title
           <div className="singlepost__Edit">
-            <i class="singlePost__Icon fa-regular fa-pen-to-square"></i>
-            <i class="singlePost__Icon fa-solid fa-trash"></i>
+            <i className="singlePost__Icon fa-regular fa-pen-to-square"></i>
+            <i className="singlePost__Icon fa-solid fa-trash"></i>
           </div>
         </h1>
         <div className="singlePost__Info">

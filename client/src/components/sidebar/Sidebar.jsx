@@ -6,11 +6,7 @@ export default function Sidebar() {
     <div className="sidebar">
       <div className="sidebar__Item">
         <span className="sidebar__Title">ABOUT ME</span>
-        <img
-          className="sidebar__Image"
-          src={images.profile}
-          alt="profile image"
-        />
+        <img className="sidebar__Image" src={images.profile} alt="profile" />
         <p className="sidebar__Text">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam
           nesciunt hic culpa ratione, perspiciatis.
@@ -29,9 +25,9 @@ export default function Sidebar() {
       <div className="sidebar__Item">
         <span className="sidebar__Title">FOLLOW US</span>
         <div className="sidebar__Social">
-          <i class="sidebarIcon__logo fa-brands fa-square-facebook" />
-          <i class="sidebarIcon__logo fa-brands fa-square-instagram" />
-          <i class="sidebarIcon__logo fa-brands fa-square-twitter" />
+          <i className="sidebarIcon__logo fa-brands fa-square-facebook" />
+          <i className="sidebarIcon__logo fa-brands fa-square-instagram" />
+          <i className="sidebarIcon__logo fa-brands fa-square-twitter" />
         </div>
       </div>
     </div>

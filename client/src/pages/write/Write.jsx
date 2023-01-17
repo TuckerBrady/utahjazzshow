@@ -4,11 +4,11 @@ import { images } from "../../constants";
 export default function Write() {
   return (
     <div className="write">
-      <img src={images.blogImage2} alt="cover photo" className="write__Image" />
+      <img src={images.blogImage2} alt="cover" className="write__Image" />
       <form className="write__Form">
         <div className="form__Group">
           <label htmlFor="fileInput">
-            <i class="write__Icon fa-regular fa-plus"></i>
+            <i className="write__Icon fa-regular fa-plus"></i>
           </label>
           <input type="file" id="fileInput" style={{ display: "none" }} />
           <input

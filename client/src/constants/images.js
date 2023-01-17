@@ -8,7 +8,7 @@ import backgroundImage1 from '../assets/background-image-1.webp';
 import backgroundImage2 from '../assets/background-image-2.jpg';
 import backgroundImage3 from '../assets/background-image-3.jpg';
 
-export default {
+const images = {
     facebookRound,
     twitter,
     instagramFilled,
@@ -19,3 +19,5 @@ export default {
     backgroundImage2,
     backgroundImage3
 }
+
+export default images;
