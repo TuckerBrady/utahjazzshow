@@ -1,30 +1,26 @@
-import "./Post.scss";
-import { images } from "../../constants";
+import { Link } from "react-router-dom";
 
-export default function Post() {
+import "./Post.scss";
+
+export default function Post({ post }) {
   return (
     <div className="post">
-      <span className="post__Title">Default Post Title</span>
-      <span className="post__Date">1 hour ago</span>
-      <img src={images.blogImage2} alt="blog 1" className="post__Image" />
+      <Link to={`/post/${post._id}`} className="reactRouter__Link">
+        <span className="post__Title">{post.title}</span>
+      </Link>
+      <span className="post__Date">
+        {new Date(post.createdAt).toDateString()}
+      </span>
+      {post.photo && (
+        <img src={post.photo} alt="blog 1" className="post__Image" />
+      )}
       <div className="post__Info">
         <div className="info__Categories">
-          <span className="category">Hunting</span>
-          <span className="category">Outdoors</span>
+          {post.categories.map((c) => (
+            <span className="category">{c.name}</span>
+          ))}
         </div>
-        <p className="post__Preview">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum,
-          minus esse numquam dolores soluta beatae laudantium. Iste quasi
-          repellat consequuntur aspernatur, at adipisci tempora eligendi
-          consequatur minima, voluptatem cum autem. Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Nostrum, minus esse numquam dolores
-          soluta beatae laudantium. Iste quasi repellat consequuntur aspernatur,
-          at adipisci tempora eligendi consequatur minima, voluptatem cum autem.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum,
-          minus esse numquam dolores soluta beatae laudantium. Iste quasi
-          repellat consequuntur aspernatur, at adipisci tempora eligendi
-          consequatur minima, voluptatem cum autem.
-        </p>
+        <p className="post__Preview">{post.description}</p>
         <hr />
       </div>
     </div>

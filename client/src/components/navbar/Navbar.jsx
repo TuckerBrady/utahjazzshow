@@ -15,22 +15,22 @@ export default function Navbar() {
       <div className="navbarCenter">
         <ul className="navbarList">
           <li className="navbarList__item">
-            <Link to="/" className="navbar__Link">
+            <Link to="/" className="reactRouter__Link">
               Home
             </Link>
           </li>
           <li className="navbarList__item">
-            <Link to="/about" className="navbar__Link">
+            <Link to="/about" className="reactRouter__Link">
               About
             </Link>
           </li>
           <li className="navbarList__item">
-            <Link to="/contact" className="navbar__Link">
+            <Link to="/contact" className="reactRouter__Link">
               Contact
             </Link>
           </li>
           <li className="navbarList__item">
-            <Link to="/write" className="navbar__Link">
+            <Link to="/write" className="reactRouter__Link">
               Write
             </Link>
           </li>
@@ -43,12 +43,12 @@ export default function Navbar() {
         ) : (
           <ul className="navbarList">
             <li className="navbarList__item">
-              <Link to="/login" className="navbar__Link">
+              <Link to="/login" className="reactRouter__Link">
                 Login
               </Link>
             </li>
             <li className="navbarList__item">
-              <Link to="/register" className="navbar__Link">
+              <Link to="/register" className="reactRouter__Link">
                 Register
               </Link>
             </li>

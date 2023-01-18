@@ -28,7 +28,7 @@ export default function Register() {
         <button className="register__Button">Register</button>
       </form>
       <button className="register__LoginButton">
-        <Link to="/login" className="navbar__Link">
+        <Link to="/login" className="reactRouter__Link">
           Login
         </Link>
       </button>
