@@ -2,6 +2,8 @@ import "./SinglePost.scss";
 import { images } from "../../constants";
 
 export default function SinglePost() {
+  const location = useLocation();
+  console.log(location);
   return (
     <div className="singlePost">
       <div className="singlePost__Wrapper">
