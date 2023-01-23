@@ -1,14 +1,12 @@
-import React from "./Sidebar.scss";
-import { images } from "../../constants";
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { Context } from "../../context/Context";
+
+import { images } from "../../constants";
+import "./Sidebar.scss";
 
 export default function Sidebar() {
   const [categories, setCategories] = useState([]);
-  const { user } = useContext(Context);
-  const PF = "http://localhost:5000/images/";
 
   useEffect(() => {
     const getCategories = async () => {
@@ -20,15 +18,11 @@ export default function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebar__Item">
-        <span className="sidebar__Title">ABOUT {user.username}</span>
-        <img
-          className="sidebar__Image"
-          src={PF + user.profilePicture}
-          alt="profile"
-        />
+        <span className="sidebar__Title">FEATURED POST</span>
+        <img className="sidebar__Image" src={images.blogImage1} alt="profile" />
         <p className="sidebar__Text">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam
-          nesciunt hic culpa ratione, perspiciatis.
+          This is the first sentence of the post: '7 Tips on HOw to Make a Good
+          Infographic'.
         </p>
       </div>
       <div className="sidebar__Item">

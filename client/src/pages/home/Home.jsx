@@ -4,7 +4,6 @@ import axios from "axios";
 
 import Header from "../../components/header/Header";
 import Posts from "../../components/posts/Posts";
-import Sidebar from "../../components/sidebar/Sidebar";
 import "./Home.scss";
 
 export default function Home() {
@@ -23,7 +22,6 @@ export default function Home() {
       <Header />
       <div className="home">
         <Posts posts={posts} />
-        <Sidebar />
       </div>
     </>
   );

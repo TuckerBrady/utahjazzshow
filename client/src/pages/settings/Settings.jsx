@@ -3,7 +3,6 @@ import axios from "axios";
 
 import "./Settings.scss";
 import { Context } from "../../context/Context";
-import { images } from "../../constants";
 
 import Sidebar from "../../components/sidebar/Sidebar";
 

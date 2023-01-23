@@ -1,8 +1,7 @@
 import React from "./Navbar.scss";
 import { Link } from "react-router-dom";
-
-import { images } from "../../constants";
 import { useContext } from "react";
+
 import { Context } from "../../context/Context";
 
 export default function Navbar() {
@@ -64,7 +63,11 @@ export default function Navbar() {
             </Link>
             <ul className="navbarList">
               <li className="navbarList__item">
-                <Link to="/write" className="reactRouter__Link">
+                <Link
+                  to="/write"
+                  className="reactRouter__Link"
+                  style={{ marginLeft: "10px" }}
+                >
                   Write
                 </Link>
               </li>
@@ -84,7 +87,6 @@ export default function Navbar() {
             </li>
           </ul>
         )}
-        <i className="NavbarIcon__search fa-sharp fa-solid fa-magnifying-glass" />
       </div>
     </div>
   );
