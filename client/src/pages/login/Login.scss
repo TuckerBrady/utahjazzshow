@@ -34,6 +34,11 @@
             border-radius: 10px;
             cursor: pointer;
         }
+
+        .login__Button:disabled {
+            cursor: progress;
+            background-color: rgb(244, 142, 142);
+        }
     }
 
     .login__Form > input:focus {

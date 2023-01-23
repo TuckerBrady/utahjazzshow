@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import "./Post.scss";
 
 export default function Post({ post }) {
+  const PF = "http://localhost:5000/images/";
+
   return (
     <div className="post">
       <Link to={`/post/${post._id}`} className="reactRouter__Link">
@@ -12,7 +14,7 @@ export default function Post({ post }) {
         {new Date(post.createdAt).toDateString()}
       </span>
       {post.photo && (
-        <img src={post.photo} alt="blog 1" className="post__Image" />
+        <img src={PF + post.photo} alt="blog 1" className="post__Image" />
       )}
       <div className="post__Info">
         <div className="info__Categories">

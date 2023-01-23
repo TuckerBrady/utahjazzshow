@@ -2,9 +2,17 @@ import React from "./Navbar.scss";
 import { Link } from "react-router-dom";
 
 import { images } from "../../constants";
+import { useContext } from "react";
+import { Context } from "../../context/Context";
 
 export default function Navbar() {
-  const user = false;
+  const { user, dispatch } = useContext(Context);
+  const PF = "http://localhost:5000/images/";
+
+  const handleLogout = () => {
+    dispatch({ type: "LOGOUT" });
+  };
+
   return (
     <div className="navbar">
       <div className="navbarLeft">
@@ -20,8 +28,18 @@ export default function Navbar() {
             </Link>
           </li>
           <li className="navbarList__item">
-            <Link to="/about" className="reactRouter__Link">
-              About
+            <Link to="/read" className="reactRouter__Link">
+              Read
+            </Link>
+          </li>
+          <li className="navbarList__item">
+            <Link to="/listen" className="reactRouter__Link">
+              Listen
+            </Link>
+          </li>
+          <li className="navbarList__item">
+            <Link to="/shop" className="reactRouter__Link">
+              Shop
             </Link>
           </li>
           <li className="navbarList__item">
@@ -29,17 +47,29 @@ export default function Navbar() {
               Contact
             </Link>
           </li>
-          <li className="navbarList__item">
-            <Link to="/write" className="reactRouter__Link">
-              Write
-            </Link>
+          <li className="navbarList__item" onClick={handleLogout}>
+            {user && "Logout"}
           </li>
-          <li className="navbarList__item">{user && "Logout"}</li>
         </ul>
       </div>
       <div className="navbarRight">
         {user ? (
-          <img className="navbarImage" src={images.profile} alt="profile" />
+          <>
+            <Link to={"/settings"}>
+              <img
+                className="navbarImage"
+                src={PF + user.profilePicture}
+                alt="profile"
+              />
+            </Link>
+            <ul className="navbarList">
+              <li className="navbarList__item">
+                <Link to="/write" className="reactRouter__Link">
+                  Write
+                </Link>
+              </li>
+            </ul>
+          </>
         ) : (
           <ul className="navbarList">
             <li className="navbarList__item">
