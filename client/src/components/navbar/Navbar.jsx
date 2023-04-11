@@ -32,16 +32,6 @@ export default function Navbar() {
             </Link>
           </li>
           <li className="navbarList__item">
-            <Link to="/listen" className="reactRouter__Link">
-              Listen
-            </Link>
-          </li>
-          <li className="navbarList__item">
-            <Link to="/shop" className="reactRouter__Link">
-              Shop
-            </Link>
-          </li>
-          <li className="navbarList__item">
             <Link to="/contact" className="reactRouter__Link">
               Contact
             </Link>
