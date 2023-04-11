@@ -6,6 +6,7 @@ import { Context } from "../../context/Context";
 
 export default function Write() {
   const [title, setTitle] = useState("");
+  const [category, setCategory] = useState("");
   const [description, setDescription] = useState("");
   const [file, setFile] = useState(null);
   const { user } = useContext(Context);
@@ -60,6 +61,46 @@ export default function Write() {
             autoFocus={true}
             onChange={(e) => setTitle(e.target.value)}
           />
+          <input
+            type="checkbox"
+            name="Fishing"
+            value="Fishing"
+            className="category__Checkbox"
+            onChange={(e) => setCategory(e.target.value)}
+          />
+          <label for="Fishing">Fishing</label>
+          <input
+            type="checkbox"
+            name="Gear"
+            value="Gear"
+            className="category__Checkbox"
+            onChange={(e) => setCategory(e.target.value)}
+          />
+          <label for="Gear">Gear</label>
+          <input
+            type="checkbox"
+            name="Hunting"
+            value="Hunting"
+            className="category__Checkbox"
+            onChange={(e) => setCategory(e.target.value)}
+          />
+          <label for="Hunting">Hunting</label>
+          <input
+            type="checkbox"
+            name="Lifestyle"
+            value="Lifestyle"
+            className="category__Checkbox"
+            onChange={(e) => setCategory(e.target.value)}
+          />
+          <label for="Lifestyle">Lifestyle</label>
+          <input
+            type="checkbox"
+            name="Outdoor/Adventure"
+            value="Outdoor/Adventure"
+            className="category__Checkbox"
+            onChange={(e) => setCategory(e.target.value)}
+          />
+          <label for="Outdoor/Adventure">Outdoor/Adventure</label>
         </div>
         <div className="form__Group">
           <textarea
