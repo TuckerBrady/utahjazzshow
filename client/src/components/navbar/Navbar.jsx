@@ -15,9 +15,12 @@ export default function Navbar() {
   return (
     <div className="navbar">
       <div className="navbarLeft">
-        <i className="navbarIcon__logo fa-brands fa-square-facebook" />
-        <i className="navbarIcon__logo fa-brands fa-square-instagram" />
-        <i className="navbarIcon__logo fa-brands fa-square-twitter" />
+        <a href="https://twitter.com/UtahJazzShow" target="_blank">
+          <i className="navbarIcon__logo fa-brands fa-square-twitter" />
+        </a>
+        <a href="https://www.facebook.com/theutahjazzshow/" target="_blank">
+          <i className="navbarIcon__logo fa-brands fa-square-facebook" />
+        </a>
       </div>
       <div className="navbarCenter">
         <ul className="navbarList">

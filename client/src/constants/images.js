@@ -9,6 +9,7 @@ import backgroundImage2 from '../assets/background-image-2.jpg';
 import backgroundImage3 from '../assets/background-image-3.jpg';
 import defaultProfilePic from '../assets/background-image-1.webp';
 import homebanner from '../assets/homebanner.png';
+import court from '../assets/court.png';
 
 const images = {
     facebookRound,
@@ -21,7 +22,8 @@ const images = {
     backgroundImage2,
     backgroundImage3,
     defaultProfilePic,
-    homebanner
+    homebanner,
+    court
 }
 
 export default images;
