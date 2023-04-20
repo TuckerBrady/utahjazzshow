@@ -98,7 +98,6 @@ export default function Settings() {
               </button>
             )}
           </div>
-
           {success && (
             <span style={{ color: "green" }}>
               Profile has been successfully updated
