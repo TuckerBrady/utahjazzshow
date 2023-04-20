@@ -48,7 +48,9 @@ export default function Navbar() {
             </Link>
           </li>
           <li className="navbarList__item" onClick={handleLogout}>
-            {user && "Logout"}
+            <Link to="/" className="reactRouter__Link">
+              {user && "Logout"}
+            </Link>
           </li>
         </ul>
       </div>
@@ -67,12 +69,7 @@ export default function Navbar() {
           <ul className="navbarList">
             <li className="navbarList__item">
               <Link to="/login" className="reactRouter__Link">
-                Login
-              </Link>
-            </li>
-            <li className="navbarList__item">
-              <Link to="/register" className="reactRouter__Link">
-                Register
+                <i class="fa-regular fa-user"></i>
               </Link>
             </li>
           </ul>

@@ -13,6 +13,7 @@ export const LoginFailure = ()=>({
 
 export const Logout = ()=>({
     type: "LOGOUT",
+    payload: user
 });
 
 export const UpdateStart = (userCredentials)=>({
