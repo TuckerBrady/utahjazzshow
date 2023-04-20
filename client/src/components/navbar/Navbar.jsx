@@ -47,11 +47,6 @@ export default function Navbar() {
               Contact
             </Link>
           </li>
-          <li className="navbarList__item" onClick={handleLogout}>
-            <Link to="/" className="reactRouter__Link">
-              {user && "Logout"}
-            </Link>
-          </li>
         </ul>
       </div>
       <div className="navbarRight">
@@ -62,8 +57,16 @@ export default function Navbar() {
                 className="navbarImage"
                 src={PF + user.profilePicture}
                 alt="profile"
+                style={{ marginRight: "10px" }}
               />
             </Link>
+            <ul className="navbarList">
+              <li className="navbarList__item" onClick={handleLogout}>
+                <Link to="/" className="reactRouter__Link">
+                  {user && "Logout"}
+                </Link>
+              </li>
+            </ul>
           </>
         ) : (
           <ul className="navbarList">

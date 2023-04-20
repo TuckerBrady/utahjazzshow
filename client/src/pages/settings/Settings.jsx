@@ -84,6 +84,7 @@ export default function Settings() {
           <label>Password</label>
           <input
             type="password"
+            placeholder={user.password}
             onChange={(e) => setPassword(e.target.value)}
           />
           <div className="settings__BottomButtons">
