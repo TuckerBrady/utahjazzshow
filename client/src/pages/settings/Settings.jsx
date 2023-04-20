@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 import "./Settings.scss";
 import { Context } from "../../context/Context";
@@ -85,9 +86,19 @@ export default function Settings() {
             type="password"
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button className="settings__Submit" type="submit">
-            Update
-          </button>
+          <div className="settings__BottomButtons">
+            <button className="settings__Submit" type="submit">
+              Update Profile
+            </button>
+            {user.isAdmin && (
+              <button className="settings__Submit">
+                <Link to="/write" className="reactRouter__Link">
+                  Write Post
+                </Link>
+              </button>
+            )}
+          </div>
+
           {success && (
             <span style={{ color: "green" }}>
               Profile has been successfully updated

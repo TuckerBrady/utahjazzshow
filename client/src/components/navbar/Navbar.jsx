@@ -15,10 +15,18 @@ export default function Navbar() {
   return (
     <div className="navbar">
       <div className="navbarLeft">
-        <a href="https://twitter.com/UtahJazzShow" target="_blank">
+        <a
+          href="https://twitter.com/UtahJazzShow"
+          target="_blank"
+          rel="noreferrer"
+        >
           <i className="navbarIcon__logo fa-brands fa-square-twitter" />
         </a>
-        <a href="https://www.facebook.com/theutahjazzshow/" target="_blank">
+        <a
+          href="https://www.facebook.com/theutahjazzshow/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <i className="navbarIcon__logo fa-brands fa-square-facebook" />
         </a>
       </div>
@@ -54,17 +62,6 @@ export default function Navbar() {
                 alt="profile"
               />
             </Link>
-            <ul className="navbarList">
-              <li className="navbarList__item">
-                <Link
-                  to="/write"
-                  className="reactRouter__Link"
-                  style={{ marginLeft: "10px" }}
-                >
-                  Write
-                </Link>
-              </li>
-            </ul>
           </>
         ) : (
           <ul className="navbarList">

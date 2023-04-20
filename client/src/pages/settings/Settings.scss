@@ -53,16 +53,39 @@
                 cursor: pointer;
             }
 
-            .settings__Submit {
-                width: 150px;
-                align-self: center;
-                border: none;
-                border-radius: 10px;
-                color: white;
-                background-color: teal;
-                padding: 10px;
-                margin-top: 20px;
-                cursor: pointer;
+            
+
+            .settings__BottomButtons {
+                padding-top: 10px;
+                display: flex;
+                justify-content: space-evenly;
+
+
+                .settings__Submit {
+                    width: 150px;
+                    align-self: center;
+                    border: none;
+                    border-radius: 10px;
+                    color: white;
+                    background-color: teal;
+                    padding: 10px;
+                    margin-top: 20px;
+                    cursor: pointer;
+                }
+
+                .navbarList {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    font-family: 'Black Ops One', cursive;
+        
+                    .navbarList__item {
+                        margin-right: 20px;
+                        font-size: 18px;
+                        font-weight: 300;
+                        cursor: pointer;
+                    }
+                }
             }
         }
 
