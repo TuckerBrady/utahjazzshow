@@ -1,14 +1,46 @@
 import { useContext, useState } from "react";
 import axios from "axios";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
 
 import "./Write.scss";
 import { Context } from "../../context/Context";
 
-export default function Write() {
+export default function Write(props) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [file, setFile] = useState(null);
   const { user } = useContext(Context);
+  const modules = {
+    toolbar: [
+      [{ header: [1, 2, 3, 4, 5, 6, false] }],
+      ["bold", "italic", "underline", "strike", "blockquote"],
+      [{ size: [] }],
+      [{ font: [] }],
+      [{ align: ["right", "center", "justify"] }],
+      [{ list: "ordered" }, { list: "bullet" }],
+      ["link", "image"],
+      [{ color: ["red", "#785412"] }],
+      [{ background: ["red", "#785412"] }],
+    ],
+  };
+  const formats = [
+    "header",
+    "bold",
+    "italic",
+    "underline",
+    "strike",
+    "blockquote",
+    "list",
+    "bullet",
+    "link",
+    "color",
+    "image",
+    "background",
+    "align",
+    "size",
+    "font",
+  ];
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -62,12 +94,15 @@ export default function Write() {
           />
         </div>
         <div className="form__Group">
-          <textarea
+          <ReactQuill
+            theme="snow"
             placeholder="Go on and tell em..."
+            modules={modules}
+            formats={formats}
             type="text"
             className="write__Input write__Text"
-            onChange={(e) => setDescription(e.target.value)}
-          ></textarea>
+            onChange={setDescription}
+          />
         </div>
         <button className="write__Submit" type="submit">
           Publish
